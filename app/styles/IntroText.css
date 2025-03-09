@@ -15,7 +15,8 @@
     letter-spacing: 4px; /* More spacing for a cinematic feel */
     text-transform: uppercase; /* All caps for a powerful appearance */
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Dark shadow for depth */
-    animation: glitch 1s infinite; /* Adds a glitch effect */
+    opacity: 0;         /* Start invisible */
+    animation: fade-in 3s ease-in-out forwards; /* 🟢 Only fade-in animation, play once */
 }
 
 /* Increased text size for each element */
@@ -35,13 +36,13 @@
     animation: pulse 1.5s infinite; /* Subtle pulsing effect */
 }
 
-/* Glitch effect for a mysterious vibe */
-@keyframes glitch {
-    0% { text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); }
-    20% { text-shadow: -3px -3px 10px rgba(0, 0, 0, 0.8); }
-    40% { text-shadow: 3px -3px 10px rgba(0, 0, 0, 0.8); }
-    60% { text-shadow: -3px 3px 10px rgba(0, 0, 0, 0.8); }
-    80% { text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); }
-    100% { text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); }
+/* 🟢 Fade-in effect (only once) */
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(20px); } /* Start transparent and move up */
+    100% { opacity: 1; transform: translateY(0); }  /* Fully visible and in place */
 }
 
+/* Pulse effect for the name border */
+@keyframes pulse {
+    0%, 100% { border-color: #fff; } /* Yellow for a dramatic highlight */
+}
