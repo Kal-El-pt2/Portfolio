@@ -1,0 +1,47 @@
+/* Import a Batman-like font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.text-center {
+    text-align: center;
+}
+
+.custom-text {
+    font-family: 'Bebas Neue', sans-serif; /* Batman-like font */
+    color: #fff;        /* White text for contrast */
+    max-width: 800px;   /* Slightly wider for better readability */
+    margin: 0 auto;     /* Centers the text */
+    line-height: 1.3;   /* Reduced line spacing for a compact look */
+    font-weight: 900;   /* Extra bold for impact */
+    letter-spacing: 4px; /* More spacing for a cinematic feel */
+    text-transform: uppercase; /* All caps for a powerful appearance */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Dark shadow for depth */
+    animation: glitch 1s infinite; /* Adds a glitch effect */
+}
+
+/* Increased text size for each element */
+.custom-text h2 {
+    font-size: 3em; /* Larger for main headings */
+}
+
+.custom-text h3 {
+    font-size: 2em; /* Slightly smaller for subheadings */
+}
+
+/* Animated border for the name */
+.name-border {
+    display: inline-block;
+    padding: 0 15px;
+    border: 2px solid #fff; /* White border for contrast */
+    animation: pulse 1.5s infinite; /* Subtle pulsing effect */
+}
+
+/* Glitch effect for a mysterious vibe */
+@keyframes glitch {
+    0% { text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); }
+    20% { text-shadow: -3px -3px 10px rgba(0, 0, 0, 0.8); }
+    40% { text-shadow: 3px -3px 10px rgba(0, 0, 0, 0.8); }
+    60% { text-shadow: -3px 3px 10px rgba(0, 0, 0, 0.8); }
+    80% { text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); }
+    100% { text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); }
+}
+

@@ -1,0 +1,96 @@
+/* Import a Batman-like font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body takes up the full height of the screen */
+html, body {
+    height: 100%;
+    font-family: 'Bebas Neue', sans-serif; /* Use a Batman-like font */
+    color: #fff; /* Default text color to white for consistency */
+}
+
+/* Center the header content and stick it to the top */
+header {
+    text-align: center;
+    padding: 10px 20px;  /* Reduced padding for a sleek look */
+    background-color: #8B0000; /* Dark red background */
+    border-bottom: 1px solid #ddd; /* Subtle border */
+    width: 100%; /* Full width */
+    position: fixed; /* Stick to the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: background-color 0.3s ease;
+}
+
+/* Change background on scroll */
+header.scrolled {
+    background-color: #600000; /* Slightly darker red when scrolled */
+}
+
+/* Style your name */
+header h1 {
+    font-size: 2.5em;  /* Larger font size for impact */
+    margin-bottom: 5px;  /* Reduced margin for a tighter look */
+    color: #fff; /* White text for better contrast */
+    font-weight: 900; /* Heavy weight for a powerful feel */
+    letter-spacing: 3px; /* Increased letter spacing for Batman style */
+}
+
+/* Style the navigation tabs */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* More space between tabs */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text for better contrast */
+    font-size: 1.2em;
+    letter-spacing: 2px; /* Increase spacing for Batman effect */
+    transition: color 0.3s ease;
+    font-weight: 700; /* Bold for a striking look */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Yellow text on hover for better visibility */
+}
+/* Style for navigation buttons */
+.tab-button {
+    background: none;
+    border: none;
+    color: #fff;               /* White text for contrast */
+    font-size: 18px;           /* Match previous text size */
+    padding: 5px;
+    cursor: pointer;           /* Pointer cursor for buttons */
+    transition: color 0.3s;
+}
+
+.tab-button:hover {
+    color: #ffcc00;            /* Hover effect */
+}
+
+.tab-button:focus {
+    outline: none;             /* Remove default button focus */
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #ff4d4d;  /* Underline active tab */
+}
+
+.logo-icon {
+    width: 30px;          /* Adjust width to match text size */
+    height: auto;         /* Maintain aspect ratio */
+}
