@@ -1,39 +1,55 @@
+// Socials.jsx
+import '../styles/Socials.css';
+
 export default function Socials() {
+    const handleNavigation = (url, newTab = true) => {
+        if (newTab) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        } else {
+            window.location.href = url;
+        }
+    };
+
     return (
-        <div className="p-6 text-white">
-            <h2 className="text-3xl font-bold mb-4">Socials</h2>
-            <ul className="space-y-2">
-                <li>
-                    <a 
-                        href="https://www.linkedin.com/in/aariv-walia" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-blue-400 hover:underline"
+        <div className="socials-container">
+            <div className="socials-grid">
+                <div className="socials-item">
+                    <button
+                        type="button"
+                        onClick={() => handleNavigation('https://www.linkedin.com/in/aariv-walia-ab3b1a201/')}
+                        className="socials-button"
                     >
                         LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href="https://github.com/aariv-walia" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-blue-400 hover:underline"
+                    </button>
+                </div>
+                <div className="socials-item">
+                    <button
+                        type="button"
+                        onClick={() => handleNavigation('https://www.github.com/Kal-El-pt2/')}
+                        className="socials-button"
                     >
-                        GitHub
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href="https://twitter.com/aariv-walia" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-blue-400 hover:underline"
+                        Github
+                    </button>
+                </div>
+                <div className="socials-item">
+                    <button
+                        type="button"
+                        onClick={() => handleNavigation('mailto:f20220052@hyderabad.bits-pilani.ac.in', false)}
+                        className="socials-button"
                     >
-                        Twitter
-                    </a>
-                </li>
-            </ul>
+                        Email
+                    </button>
+                </div>
+                <div className="socials-item">
+                    <button
+                        type="button"
+                        onClick={() => handleNavigation('https://www.instagram.com/aarivwalia/')}
+                        className="socials-button"
+                    >
+                        Instagram
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

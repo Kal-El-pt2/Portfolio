@@ -2,33 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom base styles */
 html,
 body {
   @apply bg-[#8B0000];
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
     color-scheme: dark;
   }
 }
 
+/* Custom components */
 .batman-container {
   transition: all 1.5s ease-in-out;
   z-index: 10;
 }
 
-/* 🚀 Make it fade out and scale down in place */
 .move-top-left {
-  transform: scale(0.4);   /* Reduce size to 40% */
-  opacity: 0;              /* Fade out smoothly */
-  transition: all 1.5s ease-in-out;  /* Smooth transition effect */
+  transform: scale(0.4); /* Reduce size to 40% */
+  opacity: 0; /* Fade out smoothly */
+  transition: all 1.5s ease-in-out; /* Smooth transition effect */
 }
 
-/* Smooth fade-in for Header */
 .header-fade-in {
-  opacity: 0;                /* Start hidden */
+  opacity: 0; /* Start hidden */
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  gap: 0.5rem;
 }
 
+/* In your tailwind.css file, update the .content class */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin-left:auto;
+  margin-top: -260px;
+  padding-top: 0; /* Changed from 10px to 0 */
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Add a class to adjust the header's bottom margin */
 .header-visible {
-  opacity: 1;                /* Fully visible */
+  opacity: 1;
+  margin-bottom: 0; /* Add this to remove any bottom margin */
 }

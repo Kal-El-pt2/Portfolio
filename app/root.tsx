@@ -12,8 +12,8 @@ import BatmanWelcome from "./components/BatmanWelcome";
 import IntroText from "./components/IntroText";
 import Header from "./components/Header";
 import Experience from "./components/Experience";
-import Projects from "./components/Academics";
-import Academics from "./components/Projects";
+import Projects from "./components/Projects";
+import Academics from "./components/Academics";
 import Socials from "./components/Socials";
 
 export const links: LinksFunction = () => [
@@ -47,11 +47,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-
-
 export default function App() {
   const [clickDetected, setClickDetected] = useState(false);
-  const [activeTab, setActiveTab] = useState("experience"); // 🟢 State for active tab
+  const [activeTab, setActiveTab] = useState("experience");
 
   useEffect(() => {
     const handleClick = () => {
@@ -65,7 +63,6 @@ export default function App() {
     };
   }, []);
 
-  // 🟢 Function to render content based on the active tab
   const renderActiveTab = () => {
     switch (activeTab) {
       case "experience":
@@ -92,11 +89,11 @@ export default function App() {
       {!clickDetected && <IntroText />}
 
       {clickDetected && (
-        <div
-          className={`header-fade-in ${clickDetected ? "header-visible" : ""}`}
-        >
-          <Header setActiveTab={setActiveTab} activeTab={activeTab} /> {/* 🟢 Pass props to Header */}
-          <div className="mt-4">{renderActiveTab()}</div> {/* 🟢 Render tab content */}
+        <div className={`header-fade-in ${clickDetected ? "header-visible" : ""}`}>
+          <Header setActiveTab={setActiveTab} activeTab={activeTab} />
+          <div className="content margin-top-0">
+            {renderActiveTab()}
+          </div>
         </div>
       )}
     </div>

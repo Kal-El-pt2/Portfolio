@@ -1,0 +1,50 @@
+/* Academics.css */
+
+.academics-container {
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .academics-header {
+    font-size: 1.875rem; /* equivalent to text-3xl */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #FBBF24; /* yellow-400 to match other components */
+    text-align: left;
+  }
+  
+  .academics-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.125rem;
+  }
+  
+  .academics-item {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .academics-highlight {
+    font-weight: 700;
+  }
+  
+  .academics-subheader {
+    font-size: 1.5rem; /* equivalent to text-2xl */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #FBBF24; /* yellow-400 to match other components */
+    text-align: left;
+  }
+  
+  .academics-list {
+    list-style-type: disc; /* Changed from none to disc for bullet points */
+    text-align: left; /* Changed from center to left */
+    margin-left: 1.5rem; /* Added left margin for the bullet points */
+  }
+  
+  .academics-list li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
