@@ -1,6 +1,14 @@
+import { useState } from "react";
 import "../styles/Header.css";
 
 export default function Header({ setActiveTab }: { setActiveTab: (tab: string) => void }) {
+    const [activeTab, setTab] = useState("experience");
+
+    const handleTabClick = (tab: string) => {
+        setTab(tab);
+        setActiveTab(tab);
+    };
+
     return (
         <header>
             <img src="batman.png" alt="batman" className="logo-icon" />
@@ -9,32 +17,32 @@ export default function Header({ setActiveTab }: { setActiveTab: (tab: string) =
                 <ul>
                     <li>
                         <button
-                            className="tab-button"
-                            onClick={() => setActiveTab("experience")}
+                            className={`tab-button ${activeTab === "experience" ? "active" : ""}`}
+                            onClick={() => handleTabClick("experience")}
                         >
                             Experience
                         </button>
                     </li>
                     <li>
                         <button
-                            className="tab-button"
-                            onClick={() => setActiveTab("projects")}
+                            className={`tab-button ${activeTab === "projects" ? "active" : ""}`}
+                            onClick={() => handleTabClick("projects")}
                         >
                             Projects
                         </button>
                     </li>
                     <li>
                         <button
-                            className="tab-button"
-                            onClick={() => setActiveTab("academics")}
+                            className={`tab-button ${activeTab === "academics" ? "active" : ""}`}
+                            onClick={() => handleTabClick("academics")}
                         >
                             Academics
                         </button>
                     </li>
                     <li>
                         <button
-                            className="tab-button"
-                            onClick={() => setActiveTab("socials")}
+                            className={`tab-button ${activeTab === "socials" ? "active" : ""}`}
+                            onClick={() => handleTabClick("socials")}
                         >
                             Socials
                         </button>

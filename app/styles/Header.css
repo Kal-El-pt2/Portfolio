@@ -87,7 +87,8 @@ nav ul li a:hover {
 }
 
 .tab-button.active {
-    border-bottom: 2px solid #ff4d4d;  /* Underline active tab */
+    border-bottom: 2px solid #ffcc00;  /* Underline active tab */
+    color: #ffcc00;            /* Hover effect */    
 }
 
 .logo-icon {
