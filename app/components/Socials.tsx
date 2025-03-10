@@ -2,7 +2,7 @@
 import '../styles/Socials.css';
 
 export default function Socials() {
-    const handleNavigation = (url, newTab = true) => {
+    const handleNavigation = (url:string, newTab = true) => {
         if (newTab) {
             window.open(url, '_blank', 'noopener,noreferrer');
         } else {
@@ -25,7 +25,7 @@ export default function Socials() {
                 <div className="socials-item">
                     <button
                         type="button"
-                        onClick={() => handleNavigation('https://www.github.com/Kal-El-pt2/')}
+                        onClick={() => handleNavigation('https://github.com/Kal-El-pt2?tab=repositories/')}
                         className="socials-button"
                     >
                         Github

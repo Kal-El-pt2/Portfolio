@@ -1,7 +1,6 @@
 import {
   Links,
   Meta,
-  Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
@@ -90,7 +89,7 @@ export default function App() {
 
       {clickDetected && (
         <div className={`header-fade-in ${clickDetected ? "header-visible" : ""}`}>
-          <Header setActiveTab={setActiveTab} activeTab={activeTab} />
+          <Header setActiveTab={setActiveTab} />
           <div className="content margin-top-0">
             {renderActiveTab()}
           </div>

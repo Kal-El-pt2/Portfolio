@@ -1,4 +1,7 @@
 import "../styles/BatmanWelcome.css";
+type BatmanWelcomeProps = {
+    moveToTopLeft: boolean; // Define the expected prop type
+};
 
 export default function BatmanWelcome({ moveToTopLeft }: BatmanWelcomeProps) {
     return (
