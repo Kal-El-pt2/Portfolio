@@ -14,6 +14,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Academics from "./components/Academics";
 import Socials from "./components/Socials";
+import AboutHim from "./components/AboutHim";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -34,6 +35,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/batman-logo.ico" />
+        <title>Aariv Walia - Portfolio</title>
         <Meta />
         <Links />
       </head>
@@ -48,7 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const [clickDetected, setClickDetected] = useState(false);
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("about");
 
   useEffect(() => {
     const handleClick = () => {
@@ -72,8 +75,10 @@ export default function App() {
         return <Academics />;
       case "socials":
         return <Socials />;
+      case "about":
+        return <AboutHim/>
       default:
-        return <Experience />;
+        return <AboutHim />;
     }
   };
 
