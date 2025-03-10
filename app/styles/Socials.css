@@ -30,7 +30,7 @@
 }
 
 .socials-button {
-    color: #93C5FD; /* blue-300 */
+    color: #fff; 
     font-size: 1.25rem;
     font-weight: 500;
     text-decoration: none;
@@ -48,6 +48,7 @@
 
 .socials-button:hover {
     text-decoration: underline;
+    color:#ffcc00;
 }
 
 /* Responsive adjustments */
