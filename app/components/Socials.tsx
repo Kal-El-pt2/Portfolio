@@ -25,7 +25,7 @@ export default function Socials() {
                 <div className="socials-item">
                     <button
                         type="button"
-                        onClick={() => handleNavigation('https://github.com/Kal-El-pt2?tab=repositories/')}
+                        onClick={() => handleNavigation('https://github.com/Kal-El-pt2/')}
                         className="socials-button"
                     >
                         Github
